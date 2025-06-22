@@ -1,0 +1,26 @@
+---
+const { variant = 'default', class: className = '', selectorName = '', ...props } = Astro.props as {
+  variant?: 'default' | 'inverted';
+  class?: string;
+  selectorName?: string;
+};
+
+const baseStyles = `
+  group inline-flex items-center justify-center gap-2
+  px-6 py-2 font-semibold rounded-lg border transition duration-300
+`;
+
+const variants = {
+  default: 'border-gray-300 text-gray-600 hover:bg-gray-200',
+  inverted: 'bg-black text-white hover:bg-gray-800'
+};
+
+const variantClass = variants[variant] ?? variants.default;
+---
+
+<a 
+    {...Astro.props}
+    id={Astro.props.id || selectorName}
+    class={`${selectorName} ${baseStyles} ${variantClass} ${className}`}>
+    <slot></slot>
+</a>
