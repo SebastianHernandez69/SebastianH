@@ -1,10 +1,18 @@
-import Lenis from '@studio-freight/lenis/types';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollSmoother } from 'gsap/all';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  const smoother = ScrollSmoother.create({
+    wrapper: '#smooth-wrapper',
+    content: '#smooth-content',
+    smooth: 1.2,
+    effects: true
+  });
+  
   gsap.from(".hero-text", {
     y: 40,
     opacity: 0,
@@ -29,7 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
       trigger: ".scroll-content",
       start: "top bottom",
       end: "bottom top", 
-      scrub: 1,         
+      scrub: 1,   
+      markers: true,      
     }
   });
 

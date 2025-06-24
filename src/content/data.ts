@@ -6,6 +6,7 @@ import Nextjs from "../icons/tech/front/Nextjs.astro";
 import React from "../icons/tech/front/React.astro";
 import ReactQuery from "../icons/tech/front/ReactQuery.astro";
 import Tailwind from "../icons/tech/front/Tailwind.astro";
+import Zustand from "../icons/tech/front/Zustand.astro";
 
 import Nodejs from "../icons/tech/back/Nodejs.astro";
 import Nestjs from "../icons/tech/back/Nestjs.astro";
@@ -39,6 +40,7 @@ export const TECH_STACK = [
       { title: "React", Icon: React },
       { title: "React Query", Icon: ReactQuery },
       { title: "Tailwind CSS", Icon: Tailwind },
+      { title: "Zustand", Icon: Zustand },
     ],
   },
   {
