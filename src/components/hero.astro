@@ -1,1 +1,49 @@
+---
+import Mail from "@/icons/Mail.astro";
+import Button from "@components/Button.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
+import Github from "@/icons/Github.astro";
+import FileCv from "@/icons/FileCv.astro";
+---
 
+<div
+  class="relative z-10 flex flex-col items-center justify-center text-center p-6 max-w-3xl mx-auto"
+>
+  <p class="hero-text text-xl text-gray-600 mb-2">Hi, I'm</p>
+  <h1
+    class="hero-text text-6xl font-extrabold mb-4 bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent"
+  >
+    Sebastian Hernández
+  </h1>
+  <p class="hero-text text-3xl text-gray-700">Full Stack Developer</p>
+  <p class="hero-text mt-3 text-lg text-gray-600">
+    Apasionado por el desarrollo web Full Stack, creando experiencias<br /> digitales
+    intuitivas y eficientes con tecnologías modernas.
+  </p>
+  <div class="flex w-full mt-10 min-h-10 justify-between">
+    <div class="contact-button">
+      <Button href="mailto:sebas.ismaelhz21@gmail.com" variant="inverted">
+        <Mail class="w-5 h-5 fill-white" />
+        Contactame
+      </Button>
+    </div>
+    <div class="contact-button">
+      <Button href="https://www.linkedin.com/in/sebastian-hzag/">
+        <LinkedIn class="w-5 h-5 fill-gray-500" />
+        LinkedIn
+      </Button>
+    </div>
+    <div class="contact-button">
+      <Button href="https://github.com/SebastianHernandez69">
+        <Github class="w-5 h-5 fill-gray-500" />
+        GitHub
+      </Button>
+    </div>
+    <div class="contact-button">
+      <Button href="www.google.com">
+        <FileCv class="w-5 h-5 fill-gray-500" />
+        CV
+      </Button>
+    </div>
+  </div>
+</div>

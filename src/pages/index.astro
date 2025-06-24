@@ -1,12 +1,9 @@
 ---
-import Mail from "@/icons/Mail.astro";
 import Layout from "../layouts/Layout.astro";
-import Button from "@components/Button.astro";
-import LinkedIn from "@/icons/LinkedIn.astro";
-import Github from "@/icons/Github.astro";
-import FileCv from "@/icons/FileCv.astro";
 import Bb8 from "@/components/Bb8.astro";
 import ScrollArrow from "@/components/ScrollArrow.astro";
+import Hero from "@/components/Hero.astro";
+import Skills from "@/components/Skills.astro";
 
 ---
 
@@ -18,64 +15,23 @@ import ScrollArrow from "@/components/ScrollArrow.astro";
       <Bb8 />
     </div>
 
-    <div class="absolute w-[300px] h-[300px] bg-gradient-to-br from-pink-300 via-purple-300 to-cyan-300 opacity-50 rounded-full blur-xl top-2/6 left-3/10 z-1"></div>
-    <div class="absolute w-[250px] h-[250px] bg-gradient-to-tr from-green-300 via-yellow-300 to-pink-300 opacity-30 rounded-full blur-xl bottom-2/7 right-2/7 z-0"></div>
-    <div class="absolute w-[220px] h-[220px] bg-gradient-to-tl from-blue-300 via-cyan-300 to-purple-300 opacity-20 rounded-full blur-xl top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
+    <div class="fond-circle absolute w-[300px] h-[300px] bg-gradient-to-br from-pink-300 via-purple-300 to-cyan-300 opacity-50 rounded-full blur-xl top-2/6 left-3/10 z-1"></div>
+    <div class="fond-circle absolute w-[250px] h-[250px] bg-gradient-to-tr from-green-300 via-yellow-300 to-pink-300 opacity-30 rounded-full blur-xl bottom-2/7 right-2/7 z-0"></div>
+    <div class="fond-circle absolute w-[220px] h-[220px] bg-gradient-to-tl from-blue-300 via-cyan-300 to-purple-300 opacity-20 rounded-full blur-xl top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
     
-    <div class="relative z-10 flex flex-col items-center justify-center text-center p-6 max-w-3xl mx-auto">
-      <p class="hero-text text-xl text-gray-600 mb-2">Hi, I'm</p>
-      <h1 class="hero-text text-6xl font-extrabold mb-4 bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent">
-        Sebastian Hernández
-      </h1>
-      <p class="hero-text text-3xl text-gray-700">Full Stack Developer</p>
-      <p class="hero-text mt-3 text-lg text-gray-600">Apasionado por el desarrollo web Full Stack, creando experiencias<br> digitales intuitivas y eficientes con tecnologías modernas.
-        
-      </p>
-      <div class="flex w-full mt-7 min-h-10 justify-between">
-        <div class="contact-button">
-          <Button
-            href="mailto:sebas.ismaelhz21@gmail.com"
-            variant="inverted"
-          >
-            <Mail class="w-5 h-5 fill-white"></Mail>
-            Contactame
-          </Button>
-        </div>
-        <div class="contact-button">
-          <Button
-            href="https://www.linkedin.com/in/sebastian-hzag/"
-          >
-            <LinkedIn class="w-5 h-5 fill-gray-500"></LinkedIn>
-            LinkedIn
-          </Button>
-        </div>
-        <div class="contact-button">
-          <Button
-            href="https://github.com/SebastianHernandez69"
-            >
-            <Github class="w-5 h-5 fill-gray-500"></Github>
-            GitHub
-          </Button>
-        </div>
-        <div class="contact-button">
-          <Button
-            href="www.google.com"
-          >
-            <FileCv class="w-5 h-5 fill-gray-500"></FileCv>
-            CV
-          </Button>
-        </div>
-      </div>
-    </div>
+    <Hero />
     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2">
       <ScrollArrow />
     </div>
   </section>
 
-  <section class="bg-blue-400 min-h-screen">
-    
+  <section class="container mx-auto ">
+    <Skills />
+  </section>
+
+  <section class="container mx-auto min-h-screen">
+
   </section>
 </Layout>
-
 
 <script src="/src/scripts/animations.js"></script> 
