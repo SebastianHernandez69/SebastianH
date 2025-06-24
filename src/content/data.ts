@@ -1,33 +1,33 @@
 // src/content/data.js
 
-import JavaScript from "@/icons/tech/front/JavaScript.astro";
-import TypeScript from "@/icons/tech/front/TypeScript.astro";
-import Nextjs from "@/icons/tech/front/Nextjs.astro";
-import React from "@/icons/tech/front/React.astro";
-import ReactQuery from "@/icons/tech/front/ReactQuery.astro";
-import Tailwind from "@/icons/tech/front/Tailwind.astro";
+import JavaScript from "../icons/tech/front/JavaScript.astro";
+import TypeScript from "../icons/tech/front/TypeScript.astro";
+import Nextjs from "../icons/tech/front/Nextjs.astro";
+import React from "../icons/tech/front/React.astro";
+import ReactQuery from "../icons/tech/front/ReactQuery.astro";
+import Tailwind from "../icons/tech/front/Tailwind.astro";
 
-import Nodejs from "@/icons/tech/back/Nodejs.astro";
-import Nestjs from "@/icons/tech/back/Nestjs.astro";
-import Dotnet from "@/icons/tech/back/Dotnet.astro";
-import SpringBoot from "@/icons/tech/back/SpringBoot.astro";
-import Java from "@/icons/tech/back/Java.astro";
-import Csharp from "@/icons/tech/back/Csharp.astro";
-import Graphql from "@/icons/tech/back/Graphql.astro";
+import Nodejs from "../icons/tech/back/Nodejs.astro";
+import Nestjs from "../icons/tech/back/Nestjs.astro";
+import Dotnet from "../icons/tech/back/Dotnet.astro";
+import SpringBoot from "../icons/tech/back/SpringBoot.astro";
+import Java from "../icons/tech/back/Java.astro";
+import Csharp from "../icons/tech/back/Csharp.astro";
+import Graphql from "../icons/tech/back/Graphql.astro";
 
-import MySql from "@/icons/tech/db/MySql.astro";
-import Postgres from "@/icons/tech/db/Postgre.astro";
-import Mongodb from "@/icons/tech/db/Mongodb.astro";
-import Sqlserver from "@/icons/tech/db/Sqlserver.astro";
-import Prisma from "@/icons/tech/db/Prisma.astro";
+import MySql from "../icons/tech/db/MySql.astro";
+import Postgres from "../icons/tech/db/Postgre.astro";
+import Mongodb from "../icons/tech/db/Mongodb.astro";
+import Sqlserver from "../icons/tech/db/Sqlserver.astro";
+import Prisma from "../icons/tech/db/Prisma.astro";
 
 // tools
-import Git from "@/icons/tech/tools/Git.astro";
-import Aws from "@/icons/tech/tools/Aws.astro";
-import Azure from "@/icons/tech/tools/Azure.astro";
-import Docker from "@/icons/tech/tools/Docker.astro";
-import Terraform from "@/icons/tech/tools/Terraform.astro";
-import Railway from "@/icons/tech/tools/Railway.astro";
+import Git from "../icons/tech/tools/Git.astro";
+import Aws from "../icons/tech/tools/Aws.astro";
+import Azure from "../icons/tech/tools/Azure.astro";
+import Docker from "../icons/tech/tools/Docker.astro";
+import Terraform from "../icons/tech/tools/Terraform.astro";
+import Railway from "../icons/tech/tools/Railway.astro";
 
 export const TECH_STACK = [
   {
