@@ -4,8 +4,7 @@ import { ScrollSmoother } from 'gsap/all';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener("DOMContentLoaded", () => {
   const smoother = ScrollSmoother.create({
     wrapper: '#smooth-wrapper',
     content: '#smooth-content',
@@ -13,24 +12,23 @@ document.addEventListener('DOMContentLoaded', () => {
     effects: true
   });
   
-  gsap.from(".hero-text", {
-    y: 40,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.2,
-    ease: "power3.out",
-  });
+  if(window.scrollY === 0) {
+    gsap.from(".hero-text", {
+      y: 40,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power3.out",
+    });
 
-  gsap.from(".contact-button", {
-    y: 40,
-    opacity: 0,
-    duration: 1.5,
-    stagger: 0.2,
-    ease: "power3.out",
-  })
-});
-
-document.addEventListener("DOMContentLoaded", () => {
+    gsap.from(".contact-button", {
+      y: 40,
+      opacity: 0,
+      duration: 1.5,
+      stagger: 0.2,
+      ease: "power3.out",
+    })
+  }
 
   const techTimeline = gsap.timeline({
     scrollTrigger: {
@@ -38,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       start: "top bottom",
       end: "bottom top", 
       scrub: 1,   
-      markers: true,      
+      markers: false,      
     }
   });
 

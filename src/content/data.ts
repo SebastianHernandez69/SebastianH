@@ -28,7 +28,6 @@ import Aws from "../icons/tech/tools/Aws.astro";
 import Azure from "../icons/tech/tools/Azure.astro";
 import Docker from "../icons/tech/tools/Docker.astro";
 import Terraform from "../icons/tech/tools/Terraform.astro";
-import Railway from "../icons/tech/tools/Railway.astro";
 
 export const TECH_STACK = [
   {
@@ -73,7 +72,6 @@ export const TECH_STACK = [
       { title: "Azure", Icon: Azure },
       { title: "Docker", Icon: Docker },
       { title: "Terraform", Icon: Terraform },
-      { title: "Railway", Icon: Railway },
     ],
   },
 ];

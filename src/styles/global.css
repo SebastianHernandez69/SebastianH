@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani&display=swap');
 @import "tailwindcss";
 
 @tailwind utilities;
 
 @theme{
-  --font-titles: 'titles-font', sans-serif;
-  --font-title-section: 'titles-section', sans-serif;
+  /* --font-titles: 'titles-font', sans-serif; */
+  --font-titles: 'Anton', sans-serif;
+  --font-title-section: 'Rajdhani', sans-serif;
 }
 
 @layer utilities {
@@ -17,20 +19,4 @@
     .animate-scroll-down {
       animation: scroll-down 2s infinite;
     }
-}
-
-@font-face {
-  font-family: 'titles-section';
-  src: url('public/fonts/rajdh.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'titles-font';
-  src: url('public/fonts/titles.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
 }
