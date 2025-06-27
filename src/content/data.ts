@@ -75,3 +75,27 @@ export const TECH_STACK = [
     ],
   },
 ];
+
+
+export const PROJECTS = [
+  {
+    title: "Infraestructura de e-commerce usando IaC",
+    description: "Creacion y despliegue de infraestructura necesaria para un e-commerce en Azure utilizando IaC con Terraform.",
+    image: "/projects/ec-hcl.png",
+  },
+  {
+    title: "Generador de reportes",
+    description: "Plataforma para generar reportes CSV usando la PokeAPI, procesada en background mediante Azure Functions y Message Queues.",
+    image: "/projects/PokeQueue.png",
+  },
+  {
+    title: "SharkCat",
+    description: "Web app de tutorías que conecta estudiante con tutores, permitiendo la gestion de preguntas, asignación de materias y chat en tiempo real.",
+    image: "/projects/sc-desktop.png",
+  },
+  {
+    title: "Task Management App",
+    description: "A task management application to help users organize their tasks and projects.",
+    image: "/projects/PokeQueue.png",
+  },
+]

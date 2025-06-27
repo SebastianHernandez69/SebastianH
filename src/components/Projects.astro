@@ -1,0 +1,26 @@
+---
+import Check from "src/icons/Check.astro";
+import ProjectCard from "./ProjectCard.astro";
+import {PROJECTS} from "../content/data";
+
+---
+
+<section id="projects" class="h-[90vh] relative overflow-hidden flex flex-col justify-start">
+  <div class="tech-item flex gap-2 text-gray-600 justify-center items-center">
+    <h2 class="font-title-section text-2xl font-semibold my-8">Proyectos</h2>
+    <Check class="w-7 h-7"/>
+  </div>
+  <div class="horizontal-scroll-wrapper flex gap-8 h-full w-max px-8">
+
+    <!-- Aca van los proyectos -->
+    {PROJECTS.map((project) => (
+      <ProjectCard
+        title={project.title}
+        description={project.description}
+        imagePath={project.image}
+      />
+    ))}
+    
+    <div class="shrink-0 w-[20vw]"></div>
+  </div>
+</section>

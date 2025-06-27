@@ -12,23 +12,23 @@ document.addEventListener("DOMContentLoaded", () => {
     effects: true
   });
   
-  if(window.scrollY === 0) {
-    gsap.from(".hero-text", {
-      y: 40,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.2,
-      ease: "power3.out",
-    });
+  // if(window.scrollY === 0) {
+  //   gsap.from(".hero-text", {
+  //     y: 40,
+  //     opacity: 0,
+  //     duration: 1,
+  //     stagger: 0.2,
+  //     ease: "power3.out",
+  //   });
 
-    gsap.from(".contact-button", {
-      y: 40,
-      opacity: 0,
-      duration: 1.5,
-      stagger: 0.2,
-      ease: "power3.out",
-    })
-  }
+  //   gsap.from(".contact-button", {
+  //     y: 40,
+  //     opacity: 0,
+  //     duration: 1.5,
+  //     stagger: 0.2,
+  //     ease: "power3.out",
+  //   })
+  // }
 
   const techTimeline = gsap.timeline({
     scrollTrigger: {
@@ -75,7 +75,40 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.15,
     duration: 0.6,
     ease: "power3.out",
+  }, "<")
+  .from(".project-card", {
+    y: 40,
+    opacity: 0,
+    stagger: 0.15,
+    duration: 0.6,
+    ease: "power3.out",
   }, "<");
+
+
+  const projectContainer = document.querySelector('.horizontal-scroll-wrapper');
+
+  let pContainerWith = projectContainer.offsetWidth;
+
+  if(projectContainer){
+    
+    const scrollAmount = pContainerWith - window.innerWidth;
+
+    const tween = gsap.to(projectContainer, {
+      x: () => -scrollAmount,
+      duration: 3,
+      ease: "none",
+    });
+
+    ScrollTrigger.create({
+      trigger: "#projects",
+      start: "top top",
+      end: "+=" + scrollAmount,
+      pin: true,
+      scrub: 1,
+      animation: tween,
+      markers: true,
+    })
+  }
 
 });
 
