@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
       pin: true,
       scrub: 1,
       animation: tween,
-      markers: true,
+      markers: false,
     })
   }
 

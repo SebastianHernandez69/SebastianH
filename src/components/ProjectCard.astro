@@ -1,36 +1,47 @@
 ---
-const { title, description, imagePath } = Astro.props;
+import Github from "src/icons/Github.astro";
+
+
+
+const { title, description, imagePath, icons, codeUrl } = Astro.props;
 
 ---
 <div 
     {...Astro.props}
-    class="transform transition duration-300 hover:scale-110 hover:-translate-y-1 hover:shadow-xl"
+    class="transform transition bg-transparent duration-300 hover:scale-110 hover:-translate-y-1 hover:shadow-xl"
     >
-    <div class="project-card max-w-sm h-105 bg-gray-200 rounded-lg shadow-sm hover:shadow-lg flex flex-col overflow-hidden ">
+    <div class="project-card max-w-sm h-105 bg-gray-200 rounded-lg shadow-sm flex flex-col overflow-hidden ">
     
-    <!-- Imagen -->
-    <div class="h-48 overflow-hidden">
-        <img class="w-full h-full object-cover" src=`${imagePath}` alt="Proyecto" />
-    </div>
+        <!-- Imagen -->
+        <div class="h-48 overflow-hidden">
+            <img class="w-full h-full object-cover" src=`${imagePath}` alt="Proyecto" />
+        </div>
 
-    <!-- Contenido -->
-    <div class="p-5 flex flex-col flex-grow overflow-hidden">
-        <a href="#">
+        <!-- Contenido -->
+        <div class="p-5 flex flex-col flex-grow overflow-hidden">
             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-600 line-clamp-2 overflow-hidden">
                 {title}
             </h5>
-        </a>
-        <p class="mb-3 text-sm text-gray-500 line-clamp-3 overflow-hidden">
-            {description}
-        </p>
-        <div class="mt-auto">
-            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Read more
-                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
-            </a>
+            <p class="mb-3 text-sm text-gray-500 line-clamp-3 overflow-hidden">
+                {description}
+            </p>
+            <div class="flex gap-1">
+                {icons.map((Icon: any) => (
+                    <Icon class="w-6 h-6 fill-gray-500" />
+                ))}
+            </div>
+            <div class="flex mt-auto  text-gray-600">
+                
+                <a 
+                    href={codeUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="text-white bg-gray-600 hover:bg-gray-500 flex items-center gap-1 border px-3 py-1.5 rounded-lg"
+                    >
+                        <Github class="w-4.5 h-4.5 fill-white" /> 
+                        Github
+                </a>
+            </div>
         </div>
     </div>
-</div>
 </div>

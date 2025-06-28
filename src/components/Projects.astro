@@ -18,6 +18,8 @@ import {PROJECTS} from "../content/data";
         title={project.title}
         description={project.description}
         imagePath={project.image}
+        icons={project.icons.map(({ Icon }) => Icon)}
+        codeUrl={project.codeUrl}
       />
     ))}
     
