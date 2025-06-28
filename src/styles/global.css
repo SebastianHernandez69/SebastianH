@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani&family=Onest:wght@400&display=swap');
 @import "tailwindcss";
 
 @tailwind utilities;
@@ -7,6 +7,7 @@
   /* --font-titles: 'titles-font', sans-serif; */
   --font-titles: 'Anton', sans-serif;
   --font-title-section: 'Rajdhani', sans-serif;
+  --font-onest: 'Onest', sans-serif;
 }
 
 @layer utilities {

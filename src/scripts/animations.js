@@ -11,24 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     smooth: 1.2,
     effects: true
   });
-  
-  // if(window.scrollY === 0) {
-  //   gsap.from(".hero-text", {
-  //     y: 40,
-  //     opacity: 0,
-  //     duration: 1,
-  //     stagger: 0.2,
-  //     ease: "power3.out",
-  //   });
-
-  //   gsap.from(".contact-button", {
-  //     y: 40,
-  //     opacity: 0,
-  //     duration: 1.5,
-  //     stagger: 0.2,
-  //     ease: "power3.out",
-  //   })
-  // }
 
   const techTimeline = gsap.timeline({
     scrollTrigger: {
@@ -109,6 +91,36 @@ document.addEventListener("DOMContentLoaded", () => {
       markers: false,
     })
   }
+
+  const aboutTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top bottom",
+      end: "+=500", 
+      scrub: 1,
+      markers: false,
+    }
+  });
+
+  aboutTimeline
+    .from("#about .about-title", {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    })
+    .from("#about .about-info", {
+      x: -50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    }, "<")
+    .from("#about .about-image", {
+      x: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    }, "<");
 
 });
 

@@ -5,8 +5,9 @@ import ScrollArrow from "../components/ScrollArrow.astro";
 import Hero from "../components/Hero.astro";
 import Skills from "../components/Skills.astro";
 import Code from "src/icons/Code.astro";
-import Check from "src/icons/Check.astro";
 import Projects from "src/components/Projects.astro";
+import About from "src/components/About.astro";
+import Footer from "src/components/Footer.astro";
 
 ---
 
@@ -42,18 +43,15 @@ import Projects from "src/components/Projects.astro";
         <Projects />
       </section>
 
-      <section class="container mx-auto min-h-screen">
-        <div class="tech-item flex gap-2 text-gray-600 justify-center items-center">
+      <section id="about" class="container mx-auto flex flex-col pb-10 ">
+        <div class="about-title flex gap-2 text-gray-600 justify-center items-center">
           <h2 class="font-title-section text-2xl font-semibold my-8">Sobre mí</h2>
-          <!-- <Code class="w-7 h-7 fill-gray-500"/> -->
+          <!-- <Code class="w-7 h-7 fill-gray-500" /> -->
         </div>
+
+        <About />
       </section>
-
-
-      <div class="text-center text-8xl text-gray-500 my-8">
-        WORK IN PROGRESS...
-      </div>
-
+      <Footer />
     </div>
   </div>
 </Layout>
